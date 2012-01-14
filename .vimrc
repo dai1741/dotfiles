@@ -1,3 +1,15 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+
+Bundle 'msanders/snipmate.vim'
+
 set encoding=utf8                       "デフォルトエンコード
 set fileencodings=iso-2022-jp,sjis,euc-jp "自動判別するエンコード
 set hlg=ja
