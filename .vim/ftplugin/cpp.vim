@@ -14,16 +14,17 @@ function! s:Gpp()
       let ret = system("g++ ".path." -o ".outpath)     "do compile
       
       ":echo ret
+      let ret2 = split(ret, "\n")
+      let errorpath =  $HOME."/.vimbackup/error.txt"
+      :call writefile(ret2, errorpath)
+
+      let ewinnr = bufwinnr(errorpath)
+      if ewinnr != -1     "when error window already exists
+        "move to the window
+        :exe ewinnr."wincmd w"
+        :q!     "delete it
+      endif
       if v:shell_error
-        let ret2 = split(ret, "\n")
-        let errorpath =  $HOME."/.vimbackup/error.txt"
-        :call writefile(ret2, errorpath)
-        let ewinnr = bufwinnr(errorpath)
-        if ewinnr != -1     "when error window already exists
-          "move to the window
-          :exe ewinnr."wincmd w"
-          :q!     "delete it
-        endif
         "create new wndow and show error
         "assumes $HOME/.vimbackup/ exists
         :bo 5new $HOME/.vimbackup/error.txt
