@@ -8,7 +8,11 @@ call vundle#rc()
 " required!
 Bundle 'gmarik/vundle'
 
-Bundle 'msanders/snipmate.vim'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+" Bundle "snipmate-snippets"
+Bundle "honza/snipmate-snippets"
+Bundle "garbas/vim-snipmate"
 
 set encoding=utf8                       "デフォルトエンコード
 set fileencodings=iso-2022-jp,sjis,euc-jp "自動判別するエンコード
