@@ -40,7 +40,7 @@ function! s:GppAndExecute()
     ":!g++ % -o %<.exe
     "let ret = system("./".outpath)
     ":echo ret
-    :!./%<.exe
+    :!./%<.exe; awk {}
   endif
 
 endfunction
