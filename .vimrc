@@ -14,6 +14,8 @@ Bundle "tomtom/tlib_vim"
 Bundle "honza/snipmate-snippets"
 Bundle "garbas/vim-snipmate"
 
+Bundle 'tomasr/molokai'
+
 set encoding=utf8                       "デフォルトエンコード
 set fileencodings=iso-2022-jp,sjis,euc-jp "自動判別するエンコード
 set hlg=ja
@@ -50,4 +52,4 @@ filetype indent on
 autocmd! BufRead,BufNewFile *.cgi set filetype=perl "*.cgiはperlですし
 
 set t_Co=256                            "色数
-colorscheme desert                      "カラースキーマ
+colorscheme molokai                      "カラースキーマ
