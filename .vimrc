@@ -14,6 +14,8 @@ Bundle "tomtom/tlib_vim"
 Bundle "honza/snipmate-snippets"
 Bundle "garbas/vim-snipmate"
 
+Bundle "kchmck/vim-coffee-script"
+
 Bundle 'tomasr/molokai'
 
 set encoding=utf8                       "デフォルトエンコード
