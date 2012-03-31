@@ -18,6 +18,8 @@ Bundle "kchmck/vim-coffee-script"
 
 Bundle 'tomasr/molokai'
 
+Bundle "ujihisa/quickrun"
+
 set encoding=utf8                       "デフォルトエンコード
 set fileencodings=iso-2022-jp,sjis,euc-jp "自動判別するエンコード
 set hlg=ja
