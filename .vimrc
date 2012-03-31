@@ -56,4 +56,4 @@ filetype indent on
 autocmd! BufRead,BufNewFile *.cgi set filetype=perl "*.cgiはperlですし
 
 set t_Co=256                            "色数
-colorscheme molokai                      "カラースキーマ
+colorscheme mymolokai                      "カラースキーマ
