@@ -27,7 +27,10 @@ snippet consts
 	int dx[] = {0,1,0,-1};
 	int dy[] = {-1,0,1,0};
 
-snippet struct
+
+# algorithms
+
+snippet comparable
 	struct ${1:State} {
 		int ${2:x};
 		int ${3:y};
@@ -38,3 +41,44 @@ snippet struct
 			return $4 ${5:<} other.$4;
 		}
 	};
+
+snippet unionfind
+	struct UnionFind {
+		vector<int> data;
+		UnionFind(int size) {
+			for (int i = 0; i < size; i++) {
+				data[i] = i;
+			}
+		}
+		int find(int x) {
+			if(data[x] == x)
+				return x;
+			else
+				return data[x] = find(data[x]);
+		}
+		void unite(int x, int y) {
+			data[x] = data[y];
+		}
+	};
+	
+snippet primes
+	bool is_prime[${1:SIZE}];
+	int primes[$1 / 5];
+	int primes_length = 0;
+	
+	void generate_table() {
+		for(int i = 0; i < $1; i++) {
+			is_prime[i] = true;
+		}
+		is_prime[0] = is_prime[1] = false;
+		
+		for(int i = 0; i < 1000; i++) {
+			if(!is_prime[i]) continue;
+			
+			primes[primes_length++] = i;
+			
+			for(int j = i*2; j < $1; j += i) {
+				is_prime[j] = false;
+			}
+		}
+	}
