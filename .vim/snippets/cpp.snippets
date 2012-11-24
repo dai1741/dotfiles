@@ -1,13 +1,19 @@
+# Snippets for algorithmic programming competition
 
 snippet compete
 	#include <iostream>
 	#include <vector>
 	#include <string>
 	#include <algorithm>
+	#include <functional>
+	#include <queue>
+	//#include <map>
 	#include <stdio.h>
 	using namespace std;
 	typedef long long ll;
-	#define rep(i,n) for (int i=0; i < (n); i++)
+	#define rep(i,n) for (int i = 0; i < (int)(n); i++)
+	#define all(c) c.begin(), c.end()
+	#define uniq(c) c.erase(unique(all(c)), c.end())
 	
 	int main() {
 		${1}
@@ -18,6 +24,26 @@ snippet compete
 snippet ford
 	for (int ${2:i} = ${1:count}; $2 >= 0; $2--) {
 		${3}
+	}
+
+snippet while
+	while (${1:true}) {
+		${2}
+	}
+
+snippet whilecin
+	while (cin >> ${1:n} >> ${2:m}, $1 || $2) {
+		${3}
+	}
+
+snippet cinarr
+	rep(${1:i},${2:n}) {
+		cin >> ${3:arr}[$1];
+	}
+
+snippet coutarr
+	rep(${1:i},${2:n}) {
+		cout << ${3:arr}[$1] << endl;
 	}
 
 snippet consts
