@@ -83,7 +83,7 @@ snippet unionfind
 				return data[x] = find(data[x]);
 		}
 		void unite(int x, int y) {
-			data[x] = data[y];
+			data[find(x)] = data[find(y)];
 		}
 	};
 	
