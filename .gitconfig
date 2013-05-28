@@ -32,3 +32,5 @@
   st = status
   su = submodule update
 
+[core]
+	editor = vim
