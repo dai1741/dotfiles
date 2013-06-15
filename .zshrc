@@ -49,7 +49,7 @@ compinit -u
 
 autoload -U colors && colors
 PROMPT="
-%{$fg[green]%}(%n@%m)[%h]%{$reset_color%} %{$fg[yellow]%}%~%{$reset_color%}
+%{%(?.$fg[green].$fg[red])%}(%n@%m)[%h]%{$reset_color%} %{$fg[yellow]%}%~%{$reset_color%}
 %# "
 
 
